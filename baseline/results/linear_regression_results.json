@@ -1,0 +1,56 @@
+{
+  "1": {
+    "MSE": 13.215199099187462,
+    "# train data points": 41952,
+    "# validation data points": 11630,
+    "rate": 0.7829494979657348
+  },
+  "2": {
+    "MSE": 13.205192604571929,
+    "# train data points": 43001,
+    "# validation data points": 12200,
+    "rate": 0.7789895110595823
+  },
+  "3": {
+    "MSE": 13.18742909373976,
+    "# train data points": 43275,
+    "# validation data points": 12425,
+    "rate": 0.7769299820466786
+  },
+  "4": {
+    "MSE": 13.223026783959424,
+    "# train data points": 43379,
+    "# validation data points": 12533,
+    "rate": 0.77584418371727
+  },
+  "5": {
+    "MSE": 13.204420479421398,
+    "# train data points": 43413,
+    "# validation data points": 12596,
+    "rate": 0.7751075719973576
+  },
+  "6": {
+    "MSE": 13.262190872157735,
+    "# train data points": 43428,
+    "# validation data points": 12629,
+    "rate": 0.774711454412473
+  },
+  "7": {
+    "MSE": 13.44541158768846,
+    "# train data points": 43440,
+    "# validation data points": 12640,
+    "rate": 0.7746077032810271
+  },
+  "8": {
+    "MSE": 13.513435638117414,
+    "# train data points": 43406,
+    "# validation data points": 12626,
+    "rate": 0.774664477441462
+  },
+  "9": {
+    "MSE": 13.652092301531766,
+    "# train data points": 43371,
+    "# validation data points": 12606,
+    "rate": 0.7748003644353931
+  }
+}

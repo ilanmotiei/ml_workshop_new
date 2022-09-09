@@ -1,0 +1,11 @@
+{
+  "data_filepath": "./noise_data.csv",
+  "linear_regression_results_filepath": "baseline/results/linear_regression_results.json",
+  "simple_average_results_filepath": "baseline/results/simple_average_results.json",
+  "very_simple_average_results_filepath": "baseline/results/very_simple_average_results.json",
+  "nombres": [
+    "Leq A Day", 
+    "Leq A Night"
+  ],
+  "train_set_rate": 0.8
+}
