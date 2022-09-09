@@ -21,6 +21,10 @@ def preprocess(
         nombres: List[str] = None
 ) -> dict:
     noise_data = noise_data[['station_name', 'published_dt'] + nombres]
+    # noise_data = noise_data.dropna(
+    #     axis=0,
+    #     how='any'
+    # )
 
     normalized_data = {
 
@@ -78,7 +82,8 @@ class NoiseDataset(Dataset):
                     'history_data': station_normalized_noise_data[i - k: i],
                     'next_day': station_normalized_noise_data[i],
                     'station_name': station_name,
-                    'station_index': station_index
+                    'station_index': station_index,
+                    # 'day_of_week':
                 }
 
                 if fulfill_missing_history_data:
@@ -90,7 +95,7 @@ class NoiseDataset(Dataset):
                 if tensorize:
                     data_point['history_data'] = torch.Tensor(data_point['history_data'])
                     data_point['next_day'] = torch.Tensor(data_point['next_day'])
-                    data_point['station_index'] = torch.Tensor(data_point['station_index'])
+                    data_point['station_index'] = torch.Tensor([data_point['station_index']])
 
                 self.data.append(
                     data_point
@@ -114,7 +119,7 @@ class NoiseDataset(Dataset):
         return {
             'history_data': torch.stack([i['history_data'] for i in batch]),  # size = (B, k, len(self.nombres))
             'gt': torch.stack([i['next_day'] for i in batch]),  # size = (B, len(self.nombres))
-            'station_index': torch.stack([i['station_index'] for i in batch])  # size = (B, )
+            'station_index': torch.Tensor([i['station_index'] for i in batch])  # size = (B, )
         }
 
     @staticmethod

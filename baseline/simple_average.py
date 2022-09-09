@@ -15,16 +15,11 @@ def validate(
     x_val = val_data['xs']  # shape = (n_samples, k, len(nombres))
     y_val = val_data['ys']  # shape = (n_samples, len(nombres))
 
-    print(x_val.shape)
-    print(y_val.shape)
-
     y_val_pred = np.nanmean(
         x_val,
         axis=1,
         where=~np.isnan(x_val)
     )  # shape = (n_samples, len(nombres))
-
-    print(y_val_pred.shape)
 
     mean_mse = compute_loss(
         gt=y_val,

@@ -1,4 +1,15 @@
 {
-  "MSE": 172.56497220618857,
-  "# data points": 71263
+  "all": {
+    "MSE": 50.117304758170214,
+    "# data points": 55723
+  },
+  "station": {
+    "MSE": 41.19355
+  },
+  "day_of_week": {
+    "MSE": 54.37185
+  },
+  "station_and_day_of_week": {
+    "MSE": 40.99457
+  }
 }

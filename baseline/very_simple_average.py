@@ -3,7 +3,7 @@ from typing import List, Tuple
 import numpy as np
 
 from metrics import compute_loss
-from baseline.baseline_data import get_baseline_data
+from baseline_data import get_baseline_data
 from utils import load_universal_hyperparameters, store_json_file
 
 
@@ -14,17 +14,12 @@ def validate(
     x_val = val_data['xs']  # shape = (n_samples, len(nombres))
     y_val = val_data['ys']  # shape = (n_samples, len(nombres))
 
-    print(x_val.shape)
-    print(y_val.shape)
-
     y_val_pred = np.nanmean(
         x_val,
         axis=0,
         keepdims=True,
         where=~np.isnan(x_val)
     )  # shape = (1, len(nombres))
-
-    print(y_val_pred.shape)
 
     mean_mse = compute_loss(
         gt=y_val,
