@@ -10,7 +10,7 @@ if __name__ == "__main__":
     linear_regression_results = load_json_file(universal_hyperparameters['linear_regression_results_filepath'])
     simple_average_results = load_json_file(universal_hyperparameters['simple_average_results_filepath'])
     very_simple_average_results = load_json_file(universal_hyperparameters['very_simple_average_results_filepath'])
-    lstm_results = load_json_file(universal_hyperparameters['lstm_results_filepath'])
+    lstm_results = load_json_file(universal_hyperparameters['lstm_results_filepath'])[0]['results']
 
     plt.plot(
         [int(k) for k in linear_regression_results.keys()],
@@ -29,21 +29,43 @@ if __name__ == "__main__":
 
     plt.plot(
         range(min_k, max_k),
-        [very_simple_average_results['MSE']['all'] for _ in range(min_k, max_k)],
+        [very_simple_average_results['all']['MSE'] for _ in range(min_k, max_k)],
         label='All Average'
     )
 
     plt.plot(
         range(min_k, max_k),
-        [very_simple_average_results['MSE']['station'] for _ in range(min_k, max_k)],
+        [very_simple_average_results['station']['MSE'] for _ in range(min_k, max_k)],
         label='Station Average'
     )
 
     plt.plot(
         range(min_k, max_k),
-        [very_simple_average_results['MSE']['day_of_week'] for _ in range(min_k, max_k)],
+        [very_simple_average_results['day_of_week']['MSE'] for _ in range(min_k, max_k)],
         label='Day of Week Average'
     )
 
-    label = 'Day of Week Average'
+    plt.plot(
+        range(min_k, max_k),
+        [very_simple_average_results['station_and_day_of_week']['MSE'] for _ in range(min_k, max_k)],
+        label='Station + Day of Week Average',
+        color="blue"
+    )
 
+    plt.plot(
+        [int(k) for k in lstm_results.keys()],
+        [v['false'] for v in lstm_results.values()],
+        label='LSTM',
+        color='green'
+    )
+
+    plt.plot(
+        [int(k) for k in lstm_results.keys()],
+        [v['true'] for v in lstm_results.values()],
+        label='LSTM + station',
+        color='red'
+    )
+
+    plt.legend()
+
+    plt.show()
