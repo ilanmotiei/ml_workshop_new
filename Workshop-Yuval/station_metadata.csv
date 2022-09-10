@@ -1,0 +1,71 @@
+station_name,town,longitude,latitude,estacion
+Bangalore_NIMHANS,Bangalore,77º35' 32.95'' E,12º56' 15.27'' N,299
+Lucknow_Gomti Nagar,Lucknow,80º59' 0.26'' E,26º51' 0.3'' N,324
+Mumbai_Ambassador Hotel,Mumbai,72º49' 29.61'' E,18º56' 0.67'' N,323
+Kolkata_Tartala,Kolkata,88º18' 19.2'' E,22º30' 56'' N,322
+Lucknow_Chinhat,Lucknow,81º03' 13.08'' E,26º54' 17.09'' N,321
+Hyderabad_Paradise X-Roads,Hyderabad,78º29' 15.9'' E,17º26' 36.7'' N,320
+Hyderabad_Gaddapotharam,Hyderabad,78º22' 19.8'' E,17º36' 4.1'' N,319
+Lucknow_IT College,Lucknow,80º56' 30.28'' E,26º52' 22.47'' N,318
+Lucknow_CCS Airport,Lucknow,80º53' 10.91'' E,26º45' 55.41'' N,317
+Hyderabad_Gachibowli,Hyderabad,78º20' 3.3'' E,17º27' 36.1'' N,316
+Hyderabad_JNTU Kukatpalli,Hyderabad,78º23' 39'' E,17º29' 45.3'' N,315
+Mumbai_Bisleri td. Andheri,Mumbai,72º51' 20.71'' E,19º6' 44.49'' N,314
+Mumbai_Pepsico Chembur,Mumbai,72º54' 37.12'' E,19º2' 52.89'' N,313
+Mumbai_L And T Powai,Mumbai,72º53' 34.27'' E,19º7' 18.31'' N,312
+Mumbai_M And M Kandivali,Mumbai,72º52' 12.14'' E,19º12' 3.87'' N,311
+Chennai_Velachery,Chennai,80º13' 15.27'' E,12º58' 35.09'' N,310
+Chennai_Pallikarnai,Chennai,80º12' 55.27'' E,12º56' 14.67'' N,309
+Chennai_Washermanpet,Chennai,80º16' 43.95'' E,13º7' 53.84'' N,308
+Chennai_Anna Nagar,Chennai,80º13' 23.93'' E,13º5' 21.45'' N,307
+Chennai_Sowcarpet,Chennai,80º16' 32.2'' E,13º5' 42.4'' N,306
+Hyderabad_Tarnaka,Hyderabad,78º32' 15.83'' E,17º25' 43.57'' N,305
+Delhi_Punjabi Bagh,Delhi,77º7' 54.14'' E,28º40' 12.83'' N,304
+Bangalore_RVCE,Bangalore,77º29' 58.5'' E,12º55' 23.15'' N,303
+Bangalore_Yeswanthpur,Bangalore,77º33' 28.13'' E,13º1' 5.04'' N,302
+Delhi_Mandir Marg,Delhi,77º12' 2.36'' E,28º38' 11.41'' N,301
+Bangalore_TERI Dolmur,Bangalore,77º38' 17.78'' E,12º57' 48.86'' N,300
+Bangalore_White Field,Bangalore,77º45' 5.18'' E,12º58' 38.47'' N,298
+Lucknow_Vibhuti Khand,Lucknow,81º00' 12.54'' E,26º52' 6.75'' N,297
+Lucknow_Aligunj,Lucknow,80º56' 24.43'' E,26º53' 21.89'' N,296
+Delhi_Anand Vihar,Delhi,77º18' 57.02'' E,28º38' 51.22'' N,295
+Delhi_RK Puram,Delhi,77º11' 12.4'' E,28º33' 46.23'' N,294
+Delhi_Civil Lines,Delhi,77º13' 25.75'' E,28º40' 55.97'' N,293
+Kolkata_Bag Bazar,Kolkata,88º22' 1.01'' E,22º36' 4.61'' N,292
+Kolkata_Tollygunge,Kolkata,88º20' 43.79'' E,22º29' 56.48'' N,291
+Kolkata_RG Kar Hospital,Kolkata,88º22' 43.20'' E,22º36' 16.18'' N,290
+Kolkata_Birati Neelanchal,Kolkata,88º26' 1.74'' E,22º40' 13.99'' N,289
+Mumbai_Thane,Mumbai,72º57' 50.08'' E,19º11' 57.31'' N,287
+Navi Mumbai_Vashi Hosp.,Mumbai,72º59' 46.01'' E,19º04' 57'' N,286
+Mumbai_MPCB HQ,Mumbai,73º0' 43.80'' E,19º6' 42.73'' N,285
+Mumbai_ASHP,Mumbai,72º51' 29.46'' E,19º01' 09.61'' N,284
+Mumbai_Bandra,Mumbai,72º50' 43.09'' E,19º3' 50.80'' N,283
+Kolkata_Head Quarter,Kolkata,88º24' 32.46'' E,22º33' 42.67'' N,282
+Kolkata_Patauli,Kolkata,88º23' 29.71'' E,22º28' 21.07'' N,281
+Kolkata_Kasba GolePark,Kolkata,88º24' 15.8'' E,22º31' 1.2'' N,280
+Kolkata_SSKM Hospital,,88º20' 35.29'' E,22º32' 19.58'' N,279
+Kolkata_New Market,Kolkata,88º21' 10.4'' E,22º33' 41.4'' N,278
+Lucknow_Talkatora,Lucknow,80º53' 30.25'' E,26º50' 2.44'' N,276
+Lucknow_Hajratganj,Lucknow,80º56' 51.59'' E,26º51' 0.66'' N,275
+Lucknow_SGPGI,Lucknow,80º55' 59.53'' E,26º45' 17.68'' N,274
+Lucknow_Indira Nagar,Lucknow,80º59' 57.29'' E,26º53' 25.08'' N,273
+Hyderabad_Zoo,Hyderabad,78º28' 17.42'' E,17º22' 8.44'' N,272
+Hyderabad_Jublee Hills,Hyderabad,78º23' 58.28'' E,17º26' 22.08'' N,271
+Hyderabad_Sanath Nagar TSPCB,Hyderabad,78º27' 3.74'' E,17º25' 27.77'' N,270
+Hyderabad_Abid,Hyderabad,78º28' 25.59'' E,17º23' 27.42'' N,269
+Hyderabad_Jeedimetla,Hyderabad,78º28' 10.43'' E,17º30' 44.12'' N,268
+Chennai_Perambur,Chennai,80º14' 16.85'' E,13º6' 43.46'' N,267
+Chennai_T Nagar,Chennai,80º13' 57.44'' E,13º2' 24.34'' N,266
+Chennai_Eye Hospital,Chennai,80º17' 3.35'' E,13º6' 16.13'' N,265
+Chennai_Guindy,Chennai,80º13' 9.46'' E,13º0' 42.79'' N,264
+Chennai_Triplicane,Chennai,80º16' 28.44'' E,13º3' 17.91'' N,263
+Delhi_NSIT,Delhi,77º2' 28.78'' E,28º36' 14.46'' N,262
+Delhi_ITO (Pragati Maidan),Delhi,77º14' 28.57'' E,28º37' 23.06'' N,261
+Delhi_DCE,Delhi,77º7' 3.61'' E,28º45' 00.54'' N,260
+Delhi_CPCB,Delhi,77º17' 39.65'' E,28º39' 21.1'' N,259
+Delhi_Dilshad Garden,Delhi,77º19' 6.2'' E,28º40' 53.76'' N,258
+Banglore_BTM,Banglore,77º35' 10.96'' E,12º54' 30.36'' N,257
+Banglore_Marathali,Banglore,77º34' 34.58'' E,12º54' 45.45'' N,256
+Banglore_Nisarga Bhawan,Banglore,77º35' 40.15'' E,12º59' 0.54'' N,255
+Banglore_Parisar Bhawan,Banglore,77º36' 12.38'' E,12º58' 32.18'' N,253
+Banglore_Peenya,Banglore,77º30' 11.45'' E,13º1' 4.28'' N,254
