@@ -4,6 +4,7 @@
   "simple_average_results_filepath": "baseline/results/simple_average_results.json",
   "very_simple_average_results_filepath": "baseline/results/very_simple_average_results.json",
   "lstm_results_filepath": "neural/lstm_results.json",
+  "ema_results_filepath": "baseline/ema_results.json",
   "nombres": [
     "Leq A Day", 
     "Leq A Night"

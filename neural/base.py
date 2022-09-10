@@ -50,7 +50,8 @@ class Base(pl.LightningModule):
         prediction = self.forward(
             batch['history_data'],
             # ^ : shape = (B, k, num_values_per_day)history_data,
-            batch['station_index']  # shape = (B, )
+            batch['station_index'],  # shape = (B, )
+            batch['station_photo']  # shape = (B, 3, 500, 500)
         )  # shape = (B, num_values_per_day)
 
         loss = self.compute_loss(
@@ -89,9 +90,5 @@ class Base(pl.LightningModule):
             on_epoch=True
         )
 
-    def configure_optimizers(self):
-        return Adam(
-            self.parameters(),
-            lr=self.lr
-        )
+
 

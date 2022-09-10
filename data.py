@@ -1,7 +1,9 @@
+import os
 from typing import List
 
 import numpy as np
 import torch
+import torchvision
 from tqdm import tqdm
 
 import pandas as pd
@@ -45,6 +47,30 @@ stations_normalized_noise_data = preprocess(
     nombres=universal_hyperparameters['nombres'],
 )  # stations_normalized_noise_data[station_name] = np.ndarray(of shape (n, len(nombres))
 
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
+DEVICE = torch.device(DEVICE)
+
+STATIONS_IMAGES_DIR = 'preprocessed_images_dir'
+STATIONS_METADATA_FILE = 'station_metadata.csv'
+
+station_name_to_photo = {}  # maps station names to photos
+stations_metadata = pd.read_csv(STATIONS_METADATA_FILE)
+
+station_index_to_name = {i+1: name for i, name in enumerate(stations_metadata['station_name'])}
+
+for photo_filename in os.listdir(STATIONS_IMAGES_DIR):
+    photo_filepath = f'{STATIONS_IMAGES_DIR}/{photo_filename}'
+    station_index = int(photo_filename.split('.')[0])
+    station_name = station_index_to_name[station_index]
+
+    station_photo = torchvision.io.read_image(photo_filepath) / 255
+
+    station_name_to_photo[station_name] = {
+        'photo': station_photo,
+        'resnet'
+    }
+
+
 
 class NoiseDataset(Dataset):
 
@@ -83,7 +109,7 @@ class NoiseDataset(Dataset):
                     'next_day': station_normalized_noise_data[i],
                     'station_name': station_name,
                     'station_index': station_index,
-                    # 'day_of_week':
+                    'station_photo': station_name_to_photo[station_name]
                 }
 
                 if fulfill_missing_history_data:
@@ -119,7 +145,8 @@ class NoiseDataset(Dataset):
         return {
             'history_data': torch.stack([i['history_data'] for i in batch]),  # size = (B, k, len(self.nombres))
             'gt': torch.stack([i['next_day'] for i in batch]),  # size = (B, len(self.nombres))
-            'station_index': torch.Tensor([i['station_index'] for i in batch])  # size = (B, )
+            'station_index': torch.Tensor([i['station_index'] for i in batch]),  # size = (B, ),
+            'station_photo': torch.stack([i['station_photo'] for i in batch])  # size = (B, 3, 500, 500)
         }
 
     @staticmethod

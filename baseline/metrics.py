@@ -10,7 +10,16 @@ def compute_loss(
 
     loss_per_elem = (prediction - gt) ** 2  # shape = same
 
-    return np.nanmean(
-        loss_per_elem,
-        where=~np.isnan(loss_per_elem)
-    )
+    loss = 0
+    n = 0
+    for _, elem in np.ndenumerate(loss_per_elem):
+        if np.isnan(elem):
+            continue
+
+        loss += elem
+        n += 1
+
+    if n == 0:
+        return 0
+
+    return loss / n

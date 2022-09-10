@@ -150,6 +150,39 @@ def eval_prev_predictor(
     return err / unskipped
 
 
+def sma_predictor(
+        df: pd.DataFrame,
+        col_name: str,
+        day_num: int = 3
+) -> float:
+
+    err = 0
+    unskipped = 0
+    prev_records = [None] * day_num
+
+    for _, record in df.iterrows():
+        if prev_records[0] is None or prev_records[0]["station_name"] != record["station_name"]:
+            prev_records.append(record)
+            prev_records = prev_records[1:]
+            continue
+
+        prediction = np.nanmean([prev_record[col_name] for prev_record in prev_records])
+
+        loss = (prediction - record[col_name]) ** 2
+
+        if not np.all(np.isnan(loss)):
+            err += loss
+
+        unskipped += 1
+        prev_records.append(record)
+        prev_records = prev_records[1:]
+    if DEBUG_MODE:
+        print("went over {} out of {}".format(unskipped, len(df)))
+
+    return err / unskipped
+
+
+
 def main():
     print("Starting...")
     path = ""

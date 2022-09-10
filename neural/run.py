@@ -19,11 +19,12 @@ if __name__ == "__main__":
 
     universal_hyperparameters = load_universal_hyperparameters()
 
-    lr = 5e-03
+    lr = 1e-03
     batch_size = 128
     num_workers = 16
 
     results_filepath = universal_hyperparameters['lstm_results_filepath']
+
 
     if os.path.isfile(results_filepath):
         results = load_json_file(
@@ -35,7 +36,7 @@ if __name__ == "__main__":
         ]
 
     lstm_results = {
-        'experiment': 'lstm',
+        'experiment': 'lstm_with_station_photo',
         'results': {
 
         }
@@ -44,7 +45,8 @@ if __name__ == "__main__":
     results.append(lstm_results)
 
     for k in tqdm(list(range(1, 14)) + list(range(14, 200, 7))):
-        hidden_size = 100 * k
+        hidden_size = 10 * k
+        station_embedding_size = 2 * k
 
         lstm_results['results'][k] = {
 
@@ -55,7 +57,10 @@ if __name__ == "__main__":
                 num_nombres=len(universal_hyperparameters['nombres']),
                 hidden_size=hidden_size,
                 lr=lr,
-                include_station_embedding=include_station_embedding
+                include_station_embedding=include_station_embedding,
+                station_embedding_size=station_embedding_size,
+                include_station_image=True,
+                finetune_photo_embedder=True
             )
 
             train_data = NoiseDataset(
